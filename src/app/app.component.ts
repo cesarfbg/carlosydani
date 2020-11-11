@@ -27,7 +27,7 @@ export class AppComponent {
 
   constructor( @Inject(DOCUMENT) document: any ) {
 
-    this.url = document.location.href.split('/').pop();
+    this.url = document.location.href.split('#').pop();
     try {
       this.name = this.listaDeInvitados.find( invitado => invitado.url === this.url ).name;
       this.number = `(${this.listaDeInvitados.find( invitado => invitado.url === this.url ).number})`;
