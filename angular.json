@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "carlosydani"
+    }
+  },
+  "defaultProject": "carlosydani",
+  "cli": {
+    "analytics": "8ea57142-f1af-4bcf-8ba4-e6b1a531bd50"
+  }
 }
