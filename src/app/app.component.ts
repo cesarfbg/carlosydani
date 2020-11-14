@@ -25,6 +25,8 @@ export class AppComponent {
   time = '05:00pm';
   address = 'el Restaurante Chalet Suizo Usaquén - Calle 118 #5-51 - Bogotá D.C';
 
+  error = false;
+
   constructor( @Inject(DOCUMENT) document: any ) {
 
     this.url = document.location.href.split('#').pop();
@@ -32,8 +34,9 @@ export class AppComponent {
       this.name = this.listaDeInvitados.find( invitado => invitado.url === this.url ).name;
       this.number = `(${this.listaDeInvitados.find( invitado => invitado.url === this.url ).number})`;
     } catch {
-      this.name = ' Invitado no existe';
-      this.number = ``;
+      this.error = true;
+      // this.name = ' Invitado no existe';
+      // this.number = ``;
     }
 
     setTimeout(() => {
@@ -116,9 +119,9 @@ export class AppComponent {
       url: 'contreras-canizalez'
     },
     {
-      name: 'Jesus Rodriguez',
+      name: 'Jesus Rodriguez & Sorledys Alcala',
       number: '2',
-      url: 'jesusrodriguez'
+      url: 'jesusysorledys'
     },
     {
       name: 'Christian Feo y Alejandra Mejias',
@@ -137,7 +140,7 @@ export class AppComponent {
     },
     {
       name: 'Jorge Duarte Alvarez',
-      number: '2',
+      number: '1',
       url: 'jorge-duarte'
     },
     {
@@ -226,14 +229,19 @@ export class AppComponent {
       url: 'tatiana-angel'
     },
     {
-      name: 'Stefany Forero',
+      name: 'Elvia Alvarez',
       number: '1',
-      url: 'stefany-forero'
+      url: 'elvia-alvarez'
     },
     {
       name: 'Christian & Daniela Castano',
       number: '2',
-      url: 'familia-castano'
+      url: 'christianydaniela'
+    },
+    {
+      name: 'Karen Parada y David Aldana',
+      number: '2',
+      url: 'karenydavid'
     }
   ];
 }

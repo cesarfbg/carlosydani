@@ -1,48 +1,83 @@
-<span class="deskContent">
-  <img class="arriba" src="assets/img/flor.png" width="400" />
-  <img class="abajo" src="assets/img/flor.png" width="400" />
-</span>
-
-<span class="phoneContent" style="opacity: 70%;">
-  <img class="arriba" src="assets/img/flor.png" width="200" />
-  <img class="abajo" src="assets/img/flor.png" width="200" />
-</span>
-
-<div class="row centered nomargin default-text deskContent">
-
-  <div class="col-12 text-center nomargin">
-
-    <h1 [ngClass]="{'animated fadeIn slower': this.one, 'hidden': !this.one}">¡Nos casamos!</h1>
-
-    <h1 [ngClass]="{'animated fadeIn slower': this.two, 'hidden': !this.two}" class="family-text big">Carlos Perez & Daniela Blanco</h1>
-
-    <p class="med" [ngClass]="{'animated fadeIn slower': this.three, 'hidden': !this.three}">Después de tantos momentos felices, hemos decidido darnos el <b>si quiero</b>, y nos gustaría que estuvieras presente en uno de los días más felices de nuestras vidas.</p>
-
-    <hr [ngClass]="{'animated fadeIn slower': this.four, 'hidden': !this.four}">
-    <h1 class="family-text family" [ngClass]="{'animated fadeIn slower': this.four, 'hidden': !this.four}">{{this.name}} {{ this.number }}</h1>
-    <hr [ngClass]="{'animated fadeIn slower': this.four, 'hidden': !this.four}">
-
-    <p class="med" [ngClass]="{'animated fadeIn slower': this.five, 'hidden': !this.five}">La ceremonia tendrá lugar el {{ this.date }} a las {{ this.time }} en {{ address }}. Vestimenta Formal. <br> <small><i> Ya tenemos pensado el Ferrari, la mansión y el velero. Ahora lo único que nos hace falta es el dinero. La contribución que nos brinde nos será de gran utilidad. <br> La fecha es propensa a cambios debido a la contingencia actual del Covid-19.</i></small></p>
-
-    <div class="med" [ngClass]="{'animated fadeIn slower': this.six, 'hidden': !this.six}"><b>El amor nunca acaba. <i>1 Cor. 13:8</i></b></div>
-
+<div *ngIf="error === false">
+  <span class="deskContent">
+    <img class="arriba" src="assets/img/flor.png" width="400" />
+    <img class="abajo" src="assets/img/flor.png" width="400" />
+  </span>
+  
+  <span class="phoneContent" style="opacity: 70%;">
+    <img class="arriba" src="assets/img/flor.png" width="200" />
+    <img class="abajo" src="assets/img/flor.png" width="200" />
+  </span>
+  
+  <div class="row centered nomargin default-text deskContent">
+  
+    <div class="col-12 text-center nomargin">
+  
+      <h1 [ngClass]="{'animated fadeIn slower': this.one, 'hidden': !this.one}">¡Nos casamos!</h1>
+  
+      <h1 [ngClass]="{'animated fadeIn slower': this.two, 'hidden': !this.two}" class="family-text big">Carlos Perez & Daniela Blanco</h1>
+  
+      <p class="med" [ngClass]="{'animated fadeIn slower': this.three, 'hidden': !this.three}">Después de tantos momentos felices, hemos decidido darnos el <b>si quiero</b>, y nos gustaría que estuvieras presente en uno de los días más felices de nuestras vidas.</p>
+  
+      <hr [ngClass]="{'animated fadeIn slower': this.four, 'hidden': !this.four}">
+      <h1 class="family-text family" [ngClass]="{'animated fadeIn slower': this.four, 'hidden': !this.four}">{{this.name}} {{ this.number }}</h1>
+      <hr [ngClass]="{'animated fadeIn slower': this.four, 'hidden': !this.four}">
+  
+      <p class="med" [ngClass]="{'animated fadeIn slower': this.five, 'hidden': !this.five}">La ceremonia tendrá lugar el {{ this.date }} a las {{ this.time }} en {{ address }}. Vestimenta Formal. <br> <small><i> Ya tenemos pensado el Ferrari, la mansión y el velero. Ahora lo único que nos hace falta es el dinero. La contribución que nos brinde nos será de gran utilidad. <br> La fecha es propensa a cambios debido a la contingencia actual del Covid-19.</i></small></p>
+  
+      <div class="med" [ngClass]="{'animated fadeIn slower': this.six, 'hidden': !this.six}"><b>El amor nunca acaba. <i>1 Cor. 13:8</i></b></div>
+  
+    </div>
+  </div>
+  
+  <div class="row centered nomargin default-text phoneContent" style="width: 90%;">
+    <div class="col-12 text-center nomargin">
+  
+      <h2 [ngClass]="{'animated fadeIn slower': this.one, 'hidden': !this.one}">¡Nos casamos!</h2>
+  
+      <h1 [ngClass]="{'animated fadeIn slower': this.two, 'hidden': !this.two}" class="family-text big-phone">Carlos Perez & Daniela Blanco</h1>
+  
+      <p class="med-phone" [ngClass]="{'animated fadeIn slower': this.three, 'hidden': !this.three}">Después de tantos momentos felices, hemos decidido darnos el <b>si quiero</b>, y nos gustaría que estuvieras presente en uno de los días más felices de nuestras vidas.</p>
+  
+      <h1 class="family-text family-phone" [ngClass]="{'animated fadeIn slower': this.four, 'hidden': !this.four}">{{this.name}} {{ this.number }}</h1>
+  
+      <p class="med-phone" [ngClass]="{'animated fadeIn slower': this.five, 'hidden': !this.five}">La ceremonia tendrá lugar el {{ this.date }} a las {{ this.time }} en {{ address }}. Vestimenta Formal. <br> <small><i> Ya tenemos pensado el Ferrari, la mansión y el velero. Ahora lo único que nos hace falta es el dinero. La contribución que nos brinde nos será de gran utilidad. <br> La fecha es propensa a cambios relacionados a la contingencia actual del Covid-19.</i></small></p>
+  
+      <div class="med-phone" [ngClass]="{'animated fadeIn slower': this.six, 'hidden': !this.six}"><b>El amor nunca acaba. <i>1 Cor. 13:8</i></b></div>
+  
+    </div>
   </div>
 </div>
 
-<div class="row centered nomargin default-text phoneContent" style="width: 90%;">
-  <div class="col-12 text-center nomargin">
+<div *ngIf="error === true">
+  <span class="deskContent">
+    <img class="arriba" src="assets/img/flor.png" width="400" />
+    <img class="abajo" src="assets/img/flor.png" width="400" />
+  </span>
+  
+  <span class="phoneContent" style="opacity: 70%;">
+    <img class="arriba" src="assets/img/flor.png" width="200" />
+    <img class="abajo" src="assets/img/flor.png" width="200" />
+  </span>
 
-    <h2 [ngClass]="{'animated fadeIn slower': this.one, 'hidden': !this.one}">¡Nos casamos!</h2>
+  <div class="row centered nomargin default-text deskContent">
+    <div class="col-12 text-center nomargin">
+  
+      <h1>¡Lo sentimos!</h1>
 
-    <h1 [ngClass]="{'animated fadeIn slower': this.two, 'hidden': !this.two}" class="family-text big-phone">Carlos Perez & Daniela Blanco</h1>
+      <p class="med">Creemos que hubo un error con tu invitación, por favor contacta a <a style="color: black; text-decoration: underline;" href="https://api.whatsapp.com/send?phone=573223517165&text=Hola,%20creo%20que%20hubo%20un%20error%20con%20mi%20invitaci%C3%B3n."><b>Daniela Blanco</b></a> o a <a style="color: black; text-decoration: underline;" href="https://api.whatsapp.com/send?phone=573013395824&text=Hola,%20creo%20que%20hubo%20un%20error%20con%20mi%20invitaci%C3%B3n."><b>Carlos Pérez</b></a> para asegurarte.</p>
 
-    <p class="med-phone" [ngClass]="{'animated fadeIn slower': this.three, 'hidden': !this.three}">Después de tantos momentos felices, hemos decidido darnos el <b>si quiero</b>, y nos gustaría que estuvieras presente en uno de los días más felices de nuestras vidas.</p>
-
-    <h1 class="family-text family-phone" [ngClass]="{'animated fadeIn slower': this.four, 'hidden': !this.four}">{{this.name}} {{ this.number }}</h1>
-
-    <p class="med-phone" [ngClass]="{'animated fadeIn slower': this.five, 'hidden': !this.five}">La ceremonia tendrá lugar el {{ this.date }} a las {{ this.time }} en {{ address }}. Vestimenta Formal. <br> <small><i> Ya tenemos pensado el Ferrari, la mansión y el velero. Ahora lo único que nos hace falta es el dinero. La contribución que nos brinde nos será de gran utilidad. <br> La fecha es propensa a cambios relacionados a la contingencia actual del Covid-19.</i></small></p>
-
-    <div class="med-phone" [ngClass]="{'animated fadeIn slower': this.six, 'hidden': !this.six}"><b>El amor nunca acaba. <i>1 Cor. 13:8</i></b></div>
-
+    </div>
   </div>
+  
+  <div class="row centered nomargin default-text phoneContent" style="width: 90%;">
+    <div class="col-12 text-center nomargin">
+  
+      <h1>¡Lo sentimos!</h1>
+
+      <p class="med">Creemos que hubo un error con tu invitación, por favor contacta a <a style="color: black; text-decoration: underline;" href="https://api.whatsapp.com/send?phone=573223517165&text=Hola,%20creo%20que%20hubo%20un%20error%20con%20mi%20invitaci%C3%B3n."><b>Daniela Blanco</b></a> o a <a style="color: black; text-decoration: underline;" href="https://api.whatsapp.com/send?phone=573013395824&text=Hola,%20creo%20que%20hubo%20un%20error%20con%20mi%20invitaci%C3%B3n."><b>Carlos Pérez</b></a> para asegurarte.</p>
+
+    </div>
+  </div>
+
 </div>
