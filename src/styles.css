@@ -131,6 +131,16 @@ html {
     padding: 0;
 }
 
+.link {
+  text-decoration: none;
+  color: rgb(0, 21, 88);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(0, 21, 88);
+}
+
 @media all and (max-width: 5000px) {
     .deskContent {display:block;}
     .phoneContent {display:none;}

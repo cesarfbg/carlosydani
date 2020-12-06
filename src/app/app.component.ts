@@ -24,7 +24,9 @@ export class AppComponent {
   date = '13 de Diciembre de 2020';
   time = '05:00pm';
   address = 'el Restaurante Chalet Suizo Usaquén - Calle 118 #5-51 - Bogotá D.C';
+  meetLink = 'https://meet.google.com/ejp-qafn-hyh';
 
+  meet = false;
   error = false;
 
   constructor( @Inject(DOCUMENT) document: any ) {
@@ -34,9 +36,11 @@ export class AppComponent {
       this.name = this.listaDeInvitados.find( invitado => invitado.url === this.url ).name;
       this.number = `(${this.listaDeInvitados.find( invitado => invitado.url === this.url ).number})`;
     } catch {
-      this.error = true;
-      // this.name = ' Invitado no existe';
-      // this.number = ``;
+      if (this.url === 'meet') {
+        this.meet = true;
+      } else {
+        this.error = true;
+      }
     }
 
     setTimeout(() => {
@@ -119,7 +123,7 @@ export class AppComponent {
       url: 'contreras-canizalez'
     },
     {
-      name: 'Jesus Rodriguez & Sorledys Alcala',
+      name: 'Jesus Rodriguez y Sorledys Alcala',
       number: '2',
       url: 'jesusysorledys'
     },
@@ -149,9 +153,9 @@ export class AppComponent {
       url: 'yaru-torres'
     },
     {
-      name: 'Milagro Guerra',
+      name: 'Jenniffer Rivero',
       number: '1',
-      url: 'milagro-guerra'
+      url: 'jenniffer-rivero'
     },
     {
       name: 'Familia Pastoral',
@@ -234,7 +238,7 @@ export class AppComponent {
       url: 'elvia-alvarez'
     },
     {
-      name: 'Christian & Daniela Castano',
+      name: 'Christian y Daniela Castano',
       number: '2',
       url: 'christianydaniela'
     },
@@ -242,6 +246,16 @@ export class AppComponent {
       name: 'Karen Parada y David Aldana',
       number: '2',
       url: 'karenydavid'
+    },
+    {
+      name: 'Rogers Calderon y Maibrick Useche',
+      number: '2',
+      url: 'rogersymaibrick'
+    },
+    {
+      name: 'Miguel Angel Diaz',
+      number: '1',
+      url: 'miguel-diaz'
     }
   ];
 }
